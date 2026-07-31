@@ -2,6 +2,7 @@ import "./CakePage.css";
 import NavArrows from "../components/NavArrows";
 import CakeOptionsPanel from "../components/CakeOptionsPanel";
 import CakePreview from "../components/CakePreview";
+import { useState } from "react";
 
 export default function CakePage() {
   const [tier, setTier] = useState(null);
@@ -13,7 +14,7 @@ export default function CakePage() {
 
   return (
     <div className="cake-page">
-      <NavArrows back="/" forward="/flowers" />
+      <NavArrows back="/" forward="/bouquet" />
 
       <div className="cake-layout">
         <CakePreview

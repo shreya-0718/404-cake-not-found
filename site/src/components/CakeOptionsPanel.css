@@ -40,3 +40,45 @@
 .category-btn:hover {
   opacity: 0.8;
 }
+
+.section-title {
+  font-family: var(--font-primary);
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: var(--brown);
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 14px;
+  background: var(--taupe);
+  border-color: var(--taupe);
+  border-radius: 10px;
+  font-family: var(--font-secondary);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--beige);
+}
+
+.btn.active {
+  background: var(--brown);
+  color: white;
+}
+
+.btn-large {
+  font-size: 25px;
+  padding: 14px 20px;
+  border-radius: 12px;
+}

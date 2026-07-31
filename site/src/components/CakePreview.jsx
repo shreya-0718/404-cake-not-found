@@ -1,5 +1,5 @@
 import "./CakePreview.css";
-import plate from "../assets/pins/blank.png";
+import plate from "../assets/plate.png";
 
 export default function CakePreview({ tier, flavor, icing, decor, fruit, extras} ) {
   return (
