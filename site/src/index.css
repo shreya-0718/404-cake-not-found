@@ -6,16 +6,35 @@
 
   --font-primary: "Hachi Maru Pop", cursive;
   --font-secondary: "Indie Flower", cursive;
-}
+
+  --checker-size: 60px;
+} 
 
 ::selection {
     background-color: #ffb6e6; 
     color: #ffffff;          
 }
 
+
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
   background-color: var(--taupe);
-  font-family: var(--font-secondary)
+  font-family: var(--font-secondary);
+
+  --secondary-color: #bda38f;
+
+  background-image:
+    linear-gradient(45deg, var(--secondary-color) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--secondary-color) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--secondary-color) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--secondary-color) 75%);
+
+  background-size: var(--checker-size) var(--checker-size);
+  background-position:
+    0 0,
+    0 var(--checker-size),
+    var(--checker-size) -var(--checker-size),
+    -var(--checker-size) 0;
 }

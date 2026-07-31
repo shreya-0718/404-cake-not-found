@@ -1,0 +1,42 @@
+.options-panel {
+  width:40%;
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category-btn {
+  flex: 1;
+  padding: 10px;
+  background: var(--brown);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-primary);
+  cursor: pointer;
+}
+
+.options-area {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.category-btn.active {
+  background: var(--tan);
+  color: white;
+}
+
+.category-btn:hover {
+  opacity: 0.8;
+}

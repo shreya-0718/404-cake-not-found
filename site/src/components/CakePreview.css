@@ -1,0 +1,12 @@
+.cake-preview {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.plate {
+  width: 70%;
+  opacity: 0.9;
+}

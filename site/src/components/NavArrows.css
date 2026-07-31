@@ -1,0 +1,21 @@
+.nav-arrows {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.nav-btn1, .nav-btn2 {
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 180px;
+  z-index: 0;
+}
+
+.nav-btn1:hover {
+transform:rotate(5deg)
+}
+
+.nav-btn2:hover {
+transform:rotate(-5deg)
+}
