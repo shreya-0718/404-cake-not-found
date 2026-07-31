@@ -1,0 +1,28 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./index.css";
+
+import Intro from "./pages/Intro.jsx";
+{/* 
+import Cake from "./pages/Cake.jsx";
+import Flowers from "./pages/Flowers.jsx";
+import Card from "./pages/Card.jsx";
+import Gift from "./pages/Gift.jsx";
+import Share from "./pages/Share.jsx";
+*/}
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Intro />} />
+      {/*
+      <Route path="/cake" element={<Cake />} />
+      <Route path="/flowers" element={<Flowers />} />
+      <Route path="/card" element={<Card />} />
+      <Route path="/gift" element={<Gift />} />
+      <Route path="/share/:id" element={<Share />} />
+      */}
+    </Routes>
+  </BrowserRouter>
+);

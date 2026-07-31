@@ -1,0 +1,21 @@
+:root {
+  --brown: #663d1b;
+  --tan: #bc8f6c;
+  --beige: #c7ac94;
+  --taupe: #c8b6a2;
+
+  --font-primary: "Hachi Maru Pop", cursive;
+  --font-secondary: "Indie Flower", cursive;
+}
+
+::selection {
+    background-color: #ffb6e6; 
+    color: #ffffff;          
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--taupe);
+  font-family: var(--font-secondary)
+}
