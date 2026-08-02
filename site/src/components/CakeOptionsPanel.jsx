@@ -53,13 +53,21 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     className={`btn ${flavor === "vanilla" ? "active" : ""}`}
                     onClick={() => setFlavor("vanilla")}
                     >
-                    Vanilla
+                        <img
+                            src={`src/assets/flavors/vanilla-tier-1.png`}
+                            className="button-cakes"
+                        />
+                        Vanilla
                     </button>
 
                     <button
                     className={`btn ${flavor === "chocolate" ? "active" : ""}`}
                     onClick={() => setFlavor("chocolate")}
                     >
+                        <img
+                            src={`src/assets/flavors/chocolate-tier-1.png`}
+                            className="button-cakes"
+                        />
                     Chocolate
                     </button>
 
@@ -67,13 +75,21 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     className={`btn ${flavor === "strawberry" ? "active" : ""}`}
                     onClick={() => setFlavor("strawberry")}
                     >
-                    Strawberry
+                        <img
+                            src={`src/assets/flavors/strawberry-tier-1.png`}
+                            className="button-cakes"
+                        />
+                    Me :)
                     </button>
 
                     <button
                     className={`btn ${flavor === "lemon" ? "active" : ""}`}
                     onClick={() => setFlavor("lemon")}
                     >
+                        <img
+                            src={`src/assets/flavors/lemon-tier-1.png`}
+                            className="button-cakes"
+                        />
                     Lemon
                     </button>
 
@@ -81,6 +97,10 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     className={`btn ${flavor === "redvelvet" ? "active" : ""}`}
                     onClick={() => setFlavor("redvelvet")}
                     >
+                        <img
+                            src={`src/assets/flavors/redvelvet-tier-1.png`}
+                            className="button-cakes"
+                        />
                     Red Velvet
                     </button>
                 </div>
@@ -91,7 +111,78 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
 
         {category === "icing" && (
           <div className="icing-options">
-            
+                <div className="section">
+                <h3 className="section-title">Pick Icing Color</h3>
+
+                <div className="buttons">
+                    <button
+                    className={`btn ${icing === "pink" ? "active" : ""}`}
+                    onClick={() => setIcing("pink")}
+                    >
+                        <img
+                            src={`src/assets/icing/pink-tier-1.png`}
+                            className="button-cakes"
+                        />
+                        Pastel Pink
+                    </button>
+
+                    <button
+                    className={`btn ${icing === "blue" ? "active" : ""}`}
+                    onClick={() => setIcing("blue")}
+                    >
+                        <img
+                            src={`src/assets/icing/blue-tier-1.png`}
+                            className="button-cakes"
+                        />
+                        Pastel Blue
+                    </button>
+                    
+{/*reminder to change the colors of the ones below next time*/}
+                    <button
+                    className={`btn ${icing === "pink" ? "active" : ""}`}
+                    onClick={() => setIcing("pink")}
+                    >
+                        <img
+                            src={`src/assets/icing/pink-tier-1.png`}
+                            className="button-cakes"
+                        />
+                        Pastel Pink
+                    </button>
+
+                    <button
+                    className={`btn ${icing === "pink" ? "active" : ""}`}
+                    onClick={() => setIcing("pink")}
+                    >
+                        <img
+                            src={`src/assets/icing/pink-tier-1.png`}
+                            className="button-cakes"
+                        />
+                        Pastel Pink
+                    </button>
+
+                    <button
+                    className={`btn ${icing === "pink" ? "active" : ""}`}
+                    onClick={() => setIcing("pink")}
+                    >
+                        <img
+                            src={`src/assets/icing/pink-tier-1.png`}
+                            className="button-cakes"
+                        />
+                        Pastel Pink
+                    </button>
+
+                    <button
+                    className={`btn ${icing === "pink" ? "active" : ""}`}
+                    onClick={() => setIcing("pink")}
+                    >
+                        <img
+                            src={`src/assets/icing/pink-tier-1.png`}
+                            className="button-cakes"
+                        />
+                        Pastel Pink
+                    </button>
+                </div>
+                </div>
           </div>
         )}
 
