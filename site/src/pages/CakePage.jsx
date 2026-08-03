@@ -9,8 +9,9 @@ export default function CakePage() {
   const [flavor, setFlavor] = useState("vanilla");
   const [icing, setIcing] = useState(null);
   const [decor, setDecor] = useState([]);
-  const [fruit, setFruit] = useState([]);
-  const [extras, setExtras] = useState([]);
+  const [fruit, setFruit] = useState(null);
+  const [extras, setExtras] = useState(null);
+  const [view, setView] = useState("side");
 
   return (
     <div className="cake-page">
@@ -24,6 +25,7 @@ export default function CakePage() {
           decor={decor}
           fruit={fruit}
           extras={extras}
+          view={view}
         />
 
         <CakeOptionsPanel
@@ -39,6 +41,8 @@ export default function CakePage() {
           setFruit={setFruit}
           extras={extras}
           setExtras={setExtras}
+          view={view}
+          setView={setView}
         />
       </div>
     </div>
