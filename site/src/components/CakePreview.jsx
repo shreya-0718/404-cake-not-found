@@ -9,6 +9,8 @@ export default function CakePreview({ tier, flavor, icing, decor, fruit, extras,
 
   return (
     <div className="cake-preview">
+      
+      {view==="side" && (
       <div className="plate-wrapper">
 
         <img
@@ -39,7 +41,6 @@ export default function CakePreview({ tier, flavor, icing, decor, fruit, extras,
           
         )}</>)}
 
-        {/* --- ICING --- */}
         {icing && tier >= 1 && (
           <img
             src={`src/assets/icing/${icing}-tier-1.png`}
@@ -59,7 +60,6 @@ export default function CakePreview({ tier, flavor, icing, decor, fruit, extras,
           />
         )}
 
-        {/* --- DECOR --- */}
         {decor.includes("ruffles") && tier >= 1 && (
           <img
             src={`src/assets/decor/ruffles-tier-1.png`}
@@ -117,7 +117,6 @@ export default function CakePreview({ tier, flavor, icing, decor, fruit, extras,
           />
         )}
 
-        {/* --- BOTTOM BORDER --- */}
         {decor.includes("bottom-border") && (
           <img
             src={`src/assets/decor/border-bottom.png`}
@@ -125,7 +124,71 @@ export default function CakePreview({ tier, flavor, icing, decor, fruit, extras,
           />
         )}
 
+        {fruit && tier >= 1 && (
+          <img
+            src={`src/assets/fruits/${fruit}-side.png`}
+            className={`fruit-side fruit-side-${tier}`}
+          />
+        )}
+
       </div>
+      )}
+
+      {view === "top" && (
+  <div className="top-wrapper">
+    
+    {!icing && tier >= 1 && (
+      <img
+        src={`src/assets/top-view/${flavor}-flavor-top.png`}
+        className="top-cake top-cake-1"
+      />
+    )}
+
+    {!icing && tier >= 2 && (
+      <img
+        src={`src/assets/top-view/${flavor}-flavor-top.png`}
+        className="top-cake top-cake-2"
+      />
+    )}
+
+    {!icing && tier >= 3 && (
+      <img
+        src={`src/assets/top-view/${flavor}-flavor-top.png`}
+        className="top-cake top-cake-3"
+      />
+    )}
+
+    {icing && tier >= 1 && (
+      <img
+        src={`src/assets/top-view/${icing}-icing-top.png`}
+        className="top-cake top-cake-1"
+      />
+    )}
+
+    {icing && tier >= 2 && (
+      <img
+        src={`src/assets/top-view/${icing}-icing-top.png`}
+        className="top-cake top-cake-2"
+      />
+    )}
+
+    {icing && tier >= 3 && (
+      <img
+        src={`src/assets/top-view/${icing}-icing-top.png`}
+        className="top-cake top-cake-3"
+      />
+    )}
+
+    {fruit && (
+      <img
+        src={`src/assets/fruits/${fruit}-top.png`}
+        className={`fruit-top-${tier}`}
+      />
+    )}
+
+  </div>
+)}
+
     </div>
   );
 }

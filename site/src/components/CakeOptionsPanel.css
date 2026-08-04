@@ -93,3 +93,28 @@
 .button-cakes {
     width: 70px;
 }
+
+
+.piping-controls {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.piping-color-row {
+  display: flex;
+  gap: 10px;
+}
+
+.piping-color-btn.active {
+  font-weight: bold;
+  color: black;
+}
+
+.piping-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+}

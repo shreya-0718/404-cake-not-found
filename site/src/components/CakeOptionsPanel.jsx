@@ -16,11 +16,55 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
   return (
     <div className="options-panel">
       <div className="category-row">
-        <button className={`category-btn ${category === "flavor" ? "active" : ""}`} onClick={() => setCategory("flavor") && setView("side")}>Flavor</button>
-        <button className={`category-btn ${category === "icing" ? "active" : ""}`} onClick={() => setCategory("icing") && setView("side")}>Icing</button>
-        <button className={`category-btn ${category === "decor" ? "active" : ""}`} onClick={() => setCategory("decor") && setView("side")}>Decor</button>
-        <button className={`category-btn ${category === "fruit" ? "active" : ""}`} onClick={() => setCategory("fruit")}>Fruit</button>
-        <button className={`category-btn ${category === "extra" ? "active" : ""}`} onClick={() => setCategory("extra")}>Extras!</button>
+        <button
+            className={`category-btn ${category === "flavor" ? "active" : ""}`}
+            onClick={() => {
+            setCategory("flavor");
+            setView("side");
+            }}
+        >
+            Flavor
+        </button>
+
+        <button
+            className={`category-btn ${category === "icing" ? "active" : ""}`}
+            onClick={() => {
+            setCategory("icing");
+            setView("side");
+            }}
+        >
+            Icing
+        </button>
+
+        <button
+            className={`category-btn ${category === "decor" ? "active" : ""}`}
+            onClick={() => {
+            setCategory("decor");
+            setView("side");
+            }}
+        >
+            Decor
+        </button>
+
+        <button
+            className={`category-btn ${category === "fruit" ? "active" : ""}`}
+            onClick={() => {
+            setCategory("fruit");
+            setView("top");
+            }}
+        >
+            Fruit
+        </button>
+
+        <button
+            className={`category-btn ${category === "extra" ? "active" : ""}`}
+            onClick={() => {
+            setCategory("extra");
+            setView("side");
+            }}
+        >
+            Candle
+        </button>
       </div>
 
       <div className="options-area">
@@ -257,47 +301,59 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                 <div className="buttons">
                     <button
                     className={`btn ${fruit=="strawberry" ? "active" : ""}`}
-                    onClick={() => setFruit("ruffles")}
+                    onClick={() => setFruit("strawberry")}
                     >
                         <img
-                            src={`src/assets/decor/ruffles-tier-1.png`}
+                            src={`src/assets/fruits/strawberry.png`}
                             className="button-cakes"
                         />
-                        Ruffles
+                        Strawberry
                     </button>
 
                     <button
-                    className={`btn ${decor.includes("bottom-border") ? "active" : ""}`}
-                    onClick={() => toggleDecor("bottom-border")}
+                    className={`btn ${fruit=="blueberry" ? "active" : ""}`}
+                    onClick={() => setFruit("blueberry")}
                     >
                         <img
-                            src={`src/assets/decor/border-bottom.png`}
+                            src={`src/assets/fruits/blueberry.png`}
                             className="button-cakes"
                         />
-                        Bottom Border
+                        Blueberry
                     </button>
 
                     <button
-                    className={`btn ${decor.includes("border") ? "active" : ""}`}
-                    onClick={() => toggleDecor("border")}
+                    className={`btn ${fruit=="cherry" ? "active" : ""}`}
+                    onClick={() => setFruit("cherry")}
                     >
                         <img
-                            src={`src/assets/decor/border-tier-3.png`}
+                            src={`src/assets/fruits/cherry.png`}
                             className="button-cakes"
                         />
-                        Upper Borders
+                        Cherry
                     </button>
 
                     <button
-                    className={`btn ${decor.includes("roses") ? "active" : ""}`}
-                    onClick={() => toggleDecor("roses")}
+                    className={`btn ${fruit=="banana" ? "active" : ""}`}
+                    onClick={() => setFruit("banana")}
                     >
                         <img
-                            src={`src/assets/decor/roses-tier-2.png`}
+                            src={`src/assets/fruits/banana.png`}
                             className="button-cakes"
                         />
-                        Rosettes
+                        Banana
                     </button>
+
+                    <button
+                    className={`btn ${fruit=="orange" ? "active" : ""}`}
+                    onClick={() => setFruit("orange")}
+                    >
+                        <img
+                            src={`src/assets/fruits/orange.png`}
+                            className="button-cakes"
+                        />
+                        Orange
+                    </button>
+                    
                 </div>
                 </div>
           </div>
@@ -305,10 +361,86 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
 
         {category === "extra" && (
           <div className="extra-options">
-            
+                <div className="section">
+                <h3 className="section-title">Pick your candle!!</h3>
+
+                <div className="buttons">
+                    <button
+                    className={`btn ${fruit=="strawberry" ? "active" : ""}`}
+                    onClick={() => setFruit("strawberry")}
+                    >
+                        <img
+                            src={`src/assets/fruits/strawberry.png`}
+                            className="button-cakes"
+                        />
+                        Strawberry
+                    </button>
+
+                    <button
+                    className={`btn ${fruit=="blueberry" ? "active" : ""}`}
+                    onClick={() => setFruit("blueberry")}
+                    >
+                        <img
+                            src={`src/assets/fruits/blueberry.png`}
+                            className="button-cakes"
+                        />
+                        Blueberry
+                    </button>
+
+                    <button
+                    className={`btn ${fruit=="cherry" ? "active" : ""}`}
+                    onClick={() => setFruit("cherry")}
+                    >
+                        <img
+                            src={`src/assets/fruits/cherry.png`}
+                            className="button-cakes"
+                        />
+                        Cherry
+                    </button>
+
+                    <button
+                    className={`btn ${fruit=="banana" ? "active" : ""}`}
+                    onClick={() => setFruit("banana")}
+                    >
+                        <img
+                            src={`src/assets/fruits/banana.png`}
+                            className="button-cakes"
+                        />
+                        Banana
+                    </button>
+
+                    <button
+                    className={`btn ${fruit=="orange" ? "active" : ""}`}
+                    onClick={() => setFruit("orange")}
+                    >
+                        <img
+                            src={`src/assets/fruits/orange.png`}
+                            className="button-cakes"
+                        />
+                        Orange
+                    </button>
+                    
+                </div>
+                </div>
           </div>
         )}
       </div>
+
+    <div className="buttons">
+    <button
+    className={`btn ${view=="side" ? "active" : ""}`}
+    onClick={() => setView("side")}
+    >
+        Side
+    </button> 
+    <button
+    className={`btn ${view=="top" ? "active" : ""}`}
+    onClick={() => setView("top")}
+    >
+        Top
+    </button>        
     </div>
+    </div>
+    
   );
 }

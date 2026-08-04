@@ -134,3 +134,70 @@
   pointer-events: none;
   z-index: 10;
 }
+
+.fruit-side {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 20;
+}
+
+.fruit-side-1 { 
+  bottom: 90%; width: 67%; 
+}
+.fruit-side-2 { 
+  bottom: 135%; width: 47%; 
+}
+.fruit-side-3 { 
+  bottom: 170%; width: 27%; 
+}
+
+
+.top-wrapper {
+  position: relative;
+  width: 70%;
+  margin: auto;
+}
+
+.top-cake {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.top-cake-1 { width: 80%; z-index: 1;}
+
+.top-cake-2 { width: 60%; z-index: 2;}
+
+.top-cake-3 { width: 40%; 
+  z-index: 3;}
+
+.fruit-top-1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-52%, -50%);
+  width: 84%;
+  z-index: 20;
+}
+
+.fruit-top-2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-52%, -50%);
+  width: 67%;
+  z-index: 20;
+}
+
+.fruit-top-3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-52%, -50%);
+  width: 67%;
+  z-index: 20;
+}
