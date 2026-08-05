@@ -135,26 +135,19 @@ export default function CakePreview({ tier, flavor, icing, decor, fruit, extras,
       )}
 
       {view === "top" && (
-  <div className="top-wrapper">
+    <div className="top-wrapper">
     
+    {decor.includes("bottom-border") && (
+      <img
+        src="src/assets/top-decor/border-top-bottom.png"
+        className="top-decor top-bottom-border"
+      />
+    )}
+
     {!icing && tier >= 1 && (
       <img
         src={`src/assets/top-view/${flavor}-flavor-top.png`}
         className="top-cake top-cake-1"
-      />
-    )}
-
-    {!icing && tier >= 2 && (
-      <img
-        src={`src/assets/top-view/${flavor}-flavor-top.png`}
-        className="top-cake top-cake-2"
-      />
-    )}
-
-    {!icing && tier >= 3 && (
-      <img
-        src={`src/assets/top-view/${flavor}-flavor-top.png`}
-        className="top-cake top-cake-3"
       />
     )}
 
@@ -165,10 +158,45 @@ export default function CakePreview({ tier, flavor, icing, decor, fruit, extras,
       />
     )}
 
+    {decor.includes("border") && tier >= 1 && (
+      <img
+        src="src/assets/top-decor/border-top-1.png"
+        className="top-decor top-border-1"
+      />
+    )}
+
+    {!icing && tier >= 2 && (
+      <img
+        src={`src/assets/top-view/${flavor}-flavor-top.png`}
+        className="top-cake top-cake-2"
+      />
+    )}
+
     {icing && tier >= 2 && (
       <img
         src={`src/assets/top-view/${icing}-icing-top.png`}
         className="top-cake top-cake-2"
+      />
+    )}
+
+    {decor.includes("border") && tier >= 2 && (
+      <img
+        src="src/assets/top-decor/border-top-2.png"
+        className="top-decor top-border-2"
+      />
+    )}
+
+    {decor.includes("border") && tier >= 3 && (
+      <img
+        src="src/assets/top-decor/border-top-3.png"
+        className="top-decor top-border-3"
+      />
+    )}
+
+    {!icing && tier >= 3 && (
+      <img
+        src={`src/assets/top-view/${flavor}-flavor-top.png`}
+        className="top-cake top-cake-3"
       />
     )}
 
@@ -178,6 +206,7 @@ export default function CakePreview({ tier, flavor, icing, decor, fruit, extras,
         className="top-cake top-cake-3"
       />
     )}
+
 
     {fruit && (
       <img

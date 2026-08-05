@@ -64,7 +64,7 @@
 
 .icing-tier-3 {
   width: 30%;
-  bottom: 186%;
+  bottom: 185%;
   z-index: 5;
 }
 
@@ -130,7 +130,7 @@
   position: absolute;
   bottom: 20%;
   width: 87%;
-  left: 7%;
+  left: 5.5%;
   pointer-events: none;
   z-index: 10;
 }
@@ -147,7 +147,9 @@
   bottom: 90%; width: 67%; 
 }
 .fruit-side-2 { 
-  bottom: 135%; width: 47%; 
+  bottom: 138%; 
+  left: 49%;
+  width: 47%; 
 }
 .fruit-side-3 { 
   bottom: 170%; width: 27%; 
@@ -179,8 +181,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-52%, -50%);
-  width: 84%;
+  transform: translate(-50%, -51%);
+  width: 85%;
   z-index: 20;
 }
 
@@ -197,7 +199,37 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-52%, -50%);
-  width: 67%;
-  z-index: 20;
+  transform: translate(-52%, -51%);
+  width: 47%;
+  z-index: 20; 
+}
+
+.top-decor {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.top-bottom-border {
+  width: 98%;
+}
+
+.top-border-1 {
+  width: 85%;
+  transform: translate(-50%, -51%);
+  z-index: 5;
+}
+
+.top-border-2 {
+  width: 63%;
+  transform: translate(-50%, -51%);
+  z-index: 5;
+}
+
+.top-border-3 {
+  width: 40%;
+  transform: translate(-50%, -51%);
+  z-index: 5;
 }
