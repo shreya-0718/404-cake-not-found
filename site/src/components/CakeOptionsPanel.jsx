@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./CakeOptionsPanel.css";
 
-export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icing, setIcing, decor, setDecor, fruit, setFruit, extras, setExtras, view, setView}) {
+export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icing, setIcing, decor, setDecor, fruit, setFruit, candle, setCandle, view, setView}) {
   const [category, setCategory] = useState("flavor");
 
   const toggleDecor = (item) => {
@@ -11,6 +11,19 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
         setDecor([...decor, item]);                  
     }
     };
+
+  const candleImages = import.meta.glob(
+    "/src/assets/candles/*.png",
+    { eager: true }
+  );
+
+  const candles = Object.entries(candleImages)
+  .filter(([path]) => !path.includes("all-candles-preview")) 
+  .map(([path, module]) => {
+    const file = path.split("/").pop();          
+    const name = file.replace("-candle-removebg-preview.png", ""); 
+    return { name, src: module.default };
+  });
 
 
   return (
@@ -290,6 +303,23 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     </button>
                 </div>
                 </div>
+
+                <div className="section">
+                <h3 className="section-title">Pick your candle!!</h3>
+
+               <div className="buttons">
+                    {candles.map(c => (
+                        <button
+                        key={c.name}
+                        className={`btn candle-btn ${candle === c.name ? "active" : ""}`}
+                        onClick={() => setCandle(c.name)}
+                        >
+                        <img src={c.src} alt={c.name} className="candle-img" />
+                        </button>
+                    ))}
+                </div>
+
+                </div>
           </div>
         )}
 
@@ -361,67 +391,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
 
         {category === "extra" && (
           <div className="extra-options">
-                <div className="section">
-                <h3 className="section-title">Pick your candle!!</h3>
-
-                <div className="buttons">
-                    <button
-                    className={`btn ${fruit=="strawberry" ? "active" : ""}`}
-                    onClick={() => setFruit("strawberry")}
-                    >
-                        <img
-                            src={`src/assets/fruits/strawberry.png`}
-                            className="button-cakes"
-                        />
-                        Strawberry
-                    </button>
-
-                    <button
-                    className={`btn ${fruit=="blueberry" ? "active" : ""}`}
-                    onClick={() => setFruit("blueberry")}
-                    >
-                        <img
-                            src={`src/assets/fruits/blueberry.png`}
-                            className="button-cakes"
-                        />
-                        Blueberry
-                    </button>
-
-                    <button
-                    className={`btn ${fruit=="cherry" ? "active" : ""}`}
-                    onClick={() => setFruit("cherry")}
-                    >
-                        <img
-                            src={`src/assets/fruits/cherry.png`}
-                            className="button-cakes"
-                        />
-                        Cherry
-                    </button>
-
-                    <button
-                    className={`btn ${fruit=="banana" ? "active" : ""}`}
-                    onClick={() => setFruit("banana")}
-                    >
-                        <img
-                            src={`src/assets/fruits/banana.png`}
-                            className="button-cakes"
-                        />
-                        Banana
-                    </button>
-
-                    <button
-                    className={`btn ${fruit=="orange" ? "active" : ""}`}
-                    onClick={() => setFruit("orange")}
-                    >
-                        <img
-                            src={`src/assets/fruits/orange.png`}
-                            className="button-cakes"
-                        />
-                        Orange
-                    </button>
-                    
-                </div>
-                </div>
+                
           </div>
         )}
       </div>

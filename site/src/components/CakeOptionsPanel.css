@@ -50,7 +50,8 @@
 }
 
 .section {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: -10px;
 }
 
 .buttons {
@@ -95,26 +96,29 @@
 }
 
 
-.piping-controls {
-  margin-top: 10px;
+.candle-btn {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-
-.piping-color-row {
-  display: flex;
-  gap: 10px;
-}
-
-.piping-color-btn.active {
-  font-weight: bold;
-  color: black;
-}
-
-.piping-toggle {
-  display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 20px;
+  gap: 6px;
+  padding: 10px;
+  background: var(--taupe);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  width: 40px;
+}
+
+.candle-btn:hover {
+  background: var(--beige);
+}
+
+.candle-btn.active {
+  background: var(--brown);
+}
+
+.candle-img {
+  height: 60px;   
+  width: auto;
+  pointer-events: none;
 }

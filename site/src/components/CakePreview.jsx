@@ -2,7 +2,7 @@ import "./CakePreview.css";
 import plate from "../assets/plate.png";
 import { useState } from "react";
 
-export default function CakePreview({ tier, flavor, icing, decor, fruit, extras, view}) {
+export default function CakePreview({ tier, flavor, icing, decor, fruit, candle, view}) {
 
   const [plateDimmed, setPlateDimmed] = useState(false);
 

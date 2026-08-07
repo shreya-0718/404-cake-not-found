@@ -3,19 +3,42 @@ import NavArrows from "../components/NavArrows";
 import CakeOptionsPanel from "../components/CakeOptionsPanel";
 import CakePreview from "../components/CakePreview";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 export default function CakePage() {
-  const [tier, setTier] = useState(null);
+  const [tier, setTier] = useState(1);
   const [flavor, setFlavor] = useState("vanilla");
   const [icing, setIcing] = useState(null);
   const [decor, setDecor] = useState([]);
   const [fruit, setFruit] = useState(null);
-  const [extras, setExtras] = useState(null);
+  const [candle, setCandle] = useState(null);
   const [view, setView] = useState("side");
+
+  const navigate = useNavigate();
 
   return (
     <div className="cake-page">
-      <NavArrows back="/" forward="/bouquet" />
+      <NavArrows
+        back="/"
+        forward="/share"
+        onClick={(direction) => {
+          if (direction === "forward") {
+            navigate("/share", {
+              state: {
+                tier,
+                flavor,
+                icing,
+                decor,
+                fruit,
+                candle
+              }
+            });
+          } else {
+            navigate("/");
+          }
+        }}
+      />
 
       <div className="cake-layout">
         <CakePreview
@@ -24,7 +47,7 @@ export default function CakePage() {
           icing={icing}
           decor={decor}
           fruit={fruit}
-          extras={extras}
+          candle={candle}
           view={view}
         />
 
@@ -39,12 +62,23 @@ export default function CakePage() {
           setDecor={setDecor}
           fruit={fruit}
           setFruit={setFruit}
-          extras={extras}
-          setExtras={setExtras}
+          candle={candle}
+          setCandle={setCandle}
           view={view}
           setView={setView}
         />
       </div>
     </div>
   );
+
+  navigate("/final", { state: {
+    tier,
+    flavor,
+    icing,
+    decor,
+    fruit,
+    candle,
+    card
+  }});
 }
+
