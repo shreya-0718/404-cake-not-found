@@ -7,9 +7,10 @@ import Intro from "./pages/Intro.jsx";
 import CakePage from "./pages/CakePage.jsx"
 {/* import Flowers from "./pages/Flowers.jsx";
 import Card from "./pages/Card.jsx";
-import Gift from "./pages/Gift.jsx";
-import Share from "./pages/Share.jsx";
-*/}
+import Gift from "./pages/Gift.jsx"*/}
+import FinalPreview from "./pages/FinalPreview.jsx";
+import CakeDisplayPage from "./pages/CakeDisplayPage.jsx";
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -19,8 +20,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       {/*<Route path="/flowers" element={<Flowers />} />
       <Route path="/card" element={<Card />} />
       <Route path="/gift" element={<Gift />} />
-      <Route path="/share/:id" element={<Share />} />
       */}
+      <Route path="/share" element={<FinalPreview />} />
+      <Route path="/cake/:id" element={<CakeDisplayPage />} />
+
     </Routes>
   </BrowserRouter>
 );
