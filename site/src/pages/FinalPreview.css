@@ -1,0 +1,138 @@
+.big-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-arrow-box {
+    display: flex;
+    align-items: start;
+    width: 100%;
+    padding-top: 10px;
+    margin-bottom: -30px;
+}
+
+.back-btn {
+    width: 180px;
+    transition: 0.2s;
+
+}
+
+.back-btn:hover {
+transform:rotate(5deg)}
+
+.final-preview {
+  width: 60%;
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  margin: 3rem auto;
+  gap: 2rem;
+  font-family: var(--font-primary);
+}
+
+.cake-preview-wrapper {
+  width: 550px;        
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.down {
+    display: flex;
+    align-items: end;
+    width: 700px;
+    padding-top: 5%;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 12px;
+}
+
+.view-toggle button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 14px;
+  background: var(--taupe);
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font-secondary);
+  cursor: pointer;
+  transition: 0.2s ease;
+  color: var(--brown);
+}
+
+.view-toggle button:hover {
+  background: var(--beige);
+}
+
+.view-toggle .active {
+  background: var(--brown);
+  color: white;
+}
+
+.card-message {
+  width: 100%;
+  background: rgba(255,255,255,0.5);
+  border-radius: 12px;
+  padding: 20px;
+  border: 2px dashed var(--tan);
+  color: var(--brown);
+  font-size: 1.2rem;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.share-box {
+  width: 100%;
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.share-btn {
+  padding: 12px 20px;
+  background: var(--taupe);
+  border-radius: 10px;
+  border: none;
+  font-family: var(--font-secondary);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.share-btn:hover {
+  background: var(--beige);
+}
+
+.share-result {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.share-result input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid var(--tan);
+  background: white;
+  font-family: var(--font-secondary);
+  color: var(--brown);
+}
