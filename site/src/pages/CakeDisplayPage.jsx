@@ -93,46 +93,46 @@ export default function CakeDisplayPage() {
 
       <div className="final-preview">
         <div className={`cake-preview-wrapper ${view === "side" ? "down" : ""}`}>
-
           <div className={'cake-and-candle'}>
-          {cake.candle && view=="side" && (
-            <div className="candle-flame-wrapper">
-              {candleLit && !blowing && (
-                <>
-                  <p className="blow-text">Blow into the mic to blow the candle!</p>
-                  <video
-                    src={getImage("candles/flame-loop.webm")}
-                    autoPlay
-                    loop
-                    className={`candle-flame candle-${cake.tier}`}
-                  />
-                </>
-              )}
+            {cake.candle && view === "side" && (
+              <div className="candle-flame-wrapper">
+                {candleLit && !blowing && (
+                  <>
+                    <p className="blow-text">Blow into the mic to blow the candle!</p>
+                    <video
+                      src={getImage("candles/flame-loop.webm")}
+                      autoPlay
+                      loop
+                      className={`candle-flame candle-${cake.tier}`}
+                    />
+                  </>
+                )}
 
-              {blowing && (
-                <>
-                <p className="blow-text">Blow into the mic to blow the candle!</p>
+                {blowing && (
+                  <>
+                    <p className="blow-text">Blow into the mic to blow the candle!</p>
 
-                <video
-                  src={getImage("candles/blowout.webm")}
-                  autoPlay
-                  className={`candle-flame candle-${cake.tier}`}
-                />
-                </>
-              )}
-            </div>
-          )}
+                    <video
+                      src={getImage("candles/blowout.webm")}
+                      autoPlay
+                      className={`candle-flame candle-${cake.tier}`}
+                    />
+                  </>
+                )}
+              </div>
+            )}
 
-          <CakePreview
-            tier={cake.tier}
-            flavor={cake.flavor}
-            icing={cake.icing}
-            decor={cake.decor}
-            fruit={cake.fruit}
-            candle={cake.candle}
-            view={view}
-          />
-        </div>
+            <CakePreview
+              tier={cake.tier}
+              flavor={cake.flavor}
+              icing={cake.icing}
+              decor={cake.decor}
+              fruit={cake.fruit}
+              candle={cake.candle}
+              view={view}
+            />
+          </div>
+
           <div className="view-toggle">
             <button
               className={view === "side" ? "active" : ""}

@@ -37,24 +37,30 @@ transform:rotate(5deg)}
 }
 
 .cake-preview-wrapper {
-  width: 550px;        
-  height: 300px;
+  width: min(100%, 700px);
+  min-height: 300px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+  gap: 50px;
 }
 
 .down {
-    display: flex;
-    align-items: end;
-    width: 700px;
-    padding-top: 5%;
+  width: min(100%, 700px);
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .view-toggle {
   display: flex;
   gap: 12px;
+  justify-content: center;
+  width: 100%;
+  margin-top: -10%;
 }
 
 .view-toggle button {

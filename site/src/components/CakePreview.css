@@ -1,5 +1,7 @@
 .cake-preview {
   width: 50%;
+  max-width: 420px;
+  min-height: 240px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -10,6 +12,7 @@
   position: relative;
   width: 70%;
   margin-bottom: 50px;
+  background: transparent;
 }
 
 .plate {
@@ -158,8 +161,12 @@
 
 .top-wrapper {
   position: relative;
-  width: 70%;
+  width: min(100%, 320px);
+  height: 220px;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .top-cake {
