@@ -19,10 +19,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/cake" element={<CakePage />} />
       {/*<Route path="/flowers" element={<Flowers />} />
       <Route path="/card" element={<Card />} />
-      <Route path="/gift" element={<Gift />} />
       */}
       <Route path="/share" element={<FinalPreview />} />
-      <Route path="/cake/:id" element={<CakeDisplayPage />} />
+      <Route path="/gift/:id" element={<CakeDisplayPage />} />
 
     </Routes>
   </BrowserRouter>

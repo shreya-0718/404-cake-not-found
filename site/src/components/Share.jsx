@@ -16,7 +16,7 @@ export default function Share({ cakeData }) {
     }
 
     const id = data[0].id;
-    const url = `${window.location.origin}/cake/${id}`;
+    const url = `${window.location.origin}/gift/${id}`;
     setLink(url);
   }
 

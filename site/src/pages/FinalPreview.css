@@ -16,7 +16,7 @@
 .back-btn {
     width: 180px;
     transition: 0.2s;
-
+    cursor: pointer;
 }
 
 .back-btn:hover {
@@ -84,14 +84,15 @@ transform:rotate(5deg)}
 
 .card-message {
   width: 100%;
-  background: rgba(255,255,255,0.5);
+  min-height: 120px;
+  padding: 12px;
   border-radius: 12px;
-  padding: 20px;
   border: 2px dashed var(--tan);
+  background: rgba(255,255,255,0.5);
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
   color: var(--brown);
-  font-size: 1.2rem;
-  text-align: center;
-  white-space: pre-wrap;
+  resize: vertical;
 }
 
 .share-box {

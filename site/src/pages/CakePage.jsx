@@ -13,6 +13,7 @@ export default function CakePage() {
   const [decor, setDecor] = useState([]);
   const [fruit, setFruit] = useState(null);
   const [candle, setCandle] = useState(null);
+  const [card, setCard] = useState({ message: "" });
   const [view, setView] = useState("side");
 
   const navigate = useNavigate();
@@ -31,7 +32,8 @@ export default function CakePage() {
                 icing,
                 decor,
                 fruit,
-                candle
+                candle,
+                card
               }
             });
           } else {
@@ -49,6 +51,7 @@ export default function CakePage() {
           fruit={fruit}
           candle={candle}
           view={view}
+          card={card}
         />
 
         <CakeOptionsPanel
@@ -66,6 +69,8 @@ export default function CakePage() {
           setCandle={setCandle}
           view={view}
           setView={setView}
+          card={card}
+          setCard={setCard}
         />
       </div>
     </div>

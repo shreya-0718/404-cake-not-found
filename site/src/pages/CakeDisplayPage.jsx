@@ -30,7 +30,7 @@ export default function CakeDisplayPage() {
       <div className="big-box">
       <div className="back-arrow-box">
         <img
-          src="src/assets/pins/back-arrow.png"
+          src="/src/assets/pins/back-arrow.png"
           className="back-btn"
           alt="back button"
           onClick={() => window.location.href = "/cake"}
@@ -39,12 +39,12 @@ export default function CakeDisplayPage() {
       <div className="final-preview">
         <div className={`cake-preview-wrapper ${view=="side" ? "down" : ""}`}>
           <CakePreview
-            tier={tier}
-            flavor={flavor}
-            icing={icing}
-            decor={decor}
-            fruit={fruit}
-            extras={extras}
+            tier={cake.tier}
+            flavor={cake.flavor}
+            icing={cake.icing}
+            decor={cake.decor}
+            fruit={cake.fruit}
+            candle={cake.candle}
             view={view}
           />
   
@@ -66,7 +66,7 @@ export default function CakeDisplayPage() {
         </div>
   
         <div className="card-message">
-          {card.message}
+          {cake.card.message}
         </div>
       </div>
       </div>

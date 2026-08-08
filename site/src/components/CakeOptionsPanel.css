@@ -122,3 +122,23 @@
   width: auto;
   pointer-events: none;
 }
+
+.card-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.card-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px dashed var(--tan);
+  background: rgba(255,255,255,0.5);
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  color: var(--brown);
+  resize: vertical;
+}

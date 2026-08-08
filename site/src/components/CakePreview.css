@@ -233,3 +233,30 @@
   transform: translate(-50%, -51%);
   z-index: 5;
 }
+
+.cake-candle, 
+.cake-candle-1,  
+.cake-candle-2,  
+.cake-candle-3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+    
+  pointer-events: none;
+  z-index: 20;
+}
+
+.cake-candle-1 {
+    top: -55%;
+    width: 10%;
+}
+
+.cake-candle-2 {
+    top: -87%;
+    width: 8%;
+}
+
+.cake-candle-3 {
+    top: -104.5%;
+    width: 6%;
+}

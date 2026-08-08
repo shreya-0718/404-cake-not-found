@@ -18,7 +18,7 @@ export default function Intro() {
 
       <img className="intro-button"         
       onClick={() => window.location.href = "/cake"}
-      src="src/assets/pins/next.png" 
+      src="/src/assets/pins/next.png" 
       alt="next button"></img>
 
     </div>

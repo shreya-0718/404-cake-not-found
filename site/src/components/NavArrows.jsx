@@ -4,7 +4,7 @@ export default function NavArrows({ back, forward, onClick }) {
   return (
     <div className="nav-arrows">
       <img
-        src="src/assets/pins/back-arrow.png"
+        src="/src/assets/pins/back-arrow.png"
         className="nav-btn1"
         alt="back button"
         onClick={() => {
@@ -15,7 +15,7 @@ export default function NavArrows({ back, forward, onClick }) {
 
       {forward && (
         <img
-          src="src/assets/pins/forward-arrow.png"
+          src="/src/assets/pins/forward-arrow.png"
           className="nav-btn2"
           alt="forward button"
           onClick={() => {

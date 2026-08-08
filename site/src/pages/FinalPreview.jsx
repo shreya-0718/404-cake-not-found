@@ -14,7 +14,7 @@ export default function FinalPreview() {
   const icing = cakeData.icing || null;
   const decor = cakeData.decor || [];
   const fruit = cakeData.fruit || null;
-  const candle = cakeData.candle || {};
+  const candle = cakeData.candle || null;
   const card = cakeData.card || {};
 
   const [view, setView] = useState("side");
@@ -31,7 +31,7 @@ export default function FinalPreview() {
     <div className="big-box">
     <div className="back-arrow-box">
       <img
-        src="src/assets/pins/back-arrow.png"
+        src="/src/assets/pins/back-arrow.png"
         className="back-btn"
         alt="back button"
         onClick={() => window.location.href = "/cake"}
