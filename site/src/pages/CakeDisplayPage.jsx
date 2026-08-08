@@ -25,6 +25,12 @@ export default function CakeDisplayPage() {
         </div>
       );
     }
+
+    const images = import.meta.glob("/src/assets/**/*.{png,jpg,jpeg,webp}", {
+      eager: true,
+    });
+
+    const getImage = (path) => images[`${path}`]?.default;
   
     return (
       <div className="big-box">
