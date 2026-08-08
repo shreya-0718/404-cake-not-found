@@ -1,6 +1,8 @@
 import "./Intro.css";
 import FallingFruits from "../components/FallingFruits";
 
+import next_button from "/src/assets/pins/next.png" ;
+
 export default function Intro() {
   return (
     <div className="intro-container">
@@ -18,7 +20,7 @@ export default function Intro() {
 
       <img className="intro-button"         
       onClick={() => window.location.href = "/cake"}
-      src="/src/assets/pins/next.png" 
+      src={next_button}
       alt="next button"></img>
 
     </div>

@@ -30,7 +30,7 @@ export default function CakeDisplayPage() {
       <div className="big-box">
       <div className="back-arrow-box">
         <img
-          src="/src/assets/pins/back-arrow.png"
+          src={getImage("/src/assets/pins/back-arrow.png")}
           className="back-btn"
           alt="back button"
           onClick={() => window.location.href = "/cake"}

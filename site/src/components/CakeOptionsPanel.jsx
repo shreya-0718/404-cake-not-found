@@ -4,6 +4,12 @@ import "./CakeOptionsPanel.css";
 export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icing, setIcing, decor, setDecor, fruit, setFruit, candle, setCandle, view, setView, card, setCard}) {
   const [category, setCategory] = useState("flavor");
 
+  const images = import.meta.glob("/src/assets/**/*.{png,jpg,jpeg,webp}", {
+    eager: true,
+  });
+
+  const getImage = (path) => images[`/src/assets/${path}`]?.default;
+
   const toggleDecor = (item) => {
     if (decor.includes(item)) {
         setDecor(decor.filter((d) => d !== item));   
@@ -119,7 +125,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setFlavor("vanilla")}
                     >
                         <img
-                            src={`/src/assets/flavors/vanilla-tier-1.png`}
+                            src={getImage(`/src/assets/flavors/vanilla-tier-1.png`)}
                             className="button-cakes"
                         />
                         Vanilla
@@ -130,7 +136,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setFlavor("chocolate")}
                     >
                         <img
-                            src={`/src/assets/flavors/chocolate-tier-1.png`}
+                            src={getImage(`/src/assets/flavors/chocolate-tier-1.png`)}
                             className="button-cakes"
                         />
                     Chocolate
@@ -141,7 +147,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setFlavor("strawberry")}
                     >
                         <img
-                            src={`/src/assets/flavors/strawberry-tier-1.png`}
+                            src={getImage(`/src/assets/flavors/strawberry-tier-1.png`)}
                             className="button-cakes"
                         />
                     Me :)
@@ -152,7 +158,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setFlavor("lemon")}
                     >
                         <img
-                            src={`/src/assets/flavors/lemon-tier-1.png`}
+                            src={getImage(`/src/assets/flavors/lemon-tier-1.png`)}
                             className="button-cakes"
                         />
                     Lemon
@@ -163,7 +169,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setFlavor("redvelvet")}
                     >
                         <img
-                            src={`/src/assets/flavors/redvelvet-tier-1.png`}
+                            src={getImage(`/src/assets/flavors/redvelvet-tier-1.png`)}
                             className="button-cakes"
                         />
                     Red Velvet
@@ -185,7 +191,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setIcing("pink")}
                     >
                         <img
-                            src={`/src/assets/icing/pink-tier-1.png`}
+                            src={getImage(`/src/assets/icing/pink-tier-1.png`)}
                             className="button-cakes"
                         />
                         Pastel Pink
@@ -196,7 +202,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setIcing("blue")}
                     >
                         <img
-                            src={`/src/assets/icing/blue-tier-1.png`}
+                            src={getImage(`/src/assets/icing/blue-tier-1.png`)}
                             className="button-cakes"
                         />
                         Pastel Blue
@@ -208,7 +214,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setIcing("cream")}
                     >
                         <img
-                            src={`/src/assets/icing/cream-tier-1.png`}
+                            src={getImage(`/src/assets/icing/cream-tier-1.png`)}
                             className="button-cakes"
                         />
                         Cream
@@ -219,7 +225,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setIcing("purple")}
                     >
                         <img
-                            src={`/src/assets/icing/purple-tier-1.png`}
+                            src={getImage(`/src/assets/icing/purple-tier-1.png`)}
                             className="button-cakes"
                         />
                         Lavender
@@ -230,7 +236,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setIcing("green")}
                     >
                         <img
-                            src={`/src/assets/icing/green-tier-1.png`}
+                            src={getImage(`/src/assets/icing/green-tier-1.png`)}
                             className="button-cakes"
                         />
                         Mint Green
@@ -241,7 +247,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setIcing("yellow")}
                     >
                         <img
-                            src={`/src/assets/icing/yellow-tier-1.png`}
+                            src={getImage(`/src/assets/icing/yellow-tier-1.png`)}
                             className="button-cakes"
                         />
                         Lemon
@@ -262,7 +268,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => toggleDecor("ruffles")}
                     >
                         <img
-                            src={`/src/assets/decor/ruffles-tier-1.png`}
+                            src={getImage(`/src/assets/decor/ruffles-tier-1.png`)}
                             className="button-cakes"
                         />
                         Ruffles
@@ -273,7 +279,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => toggleDecor("bottom-border")}
                     >
                         <img
-                            src={`/src/assets/decor/border-bottom.png`}
+                            src={getImage(`/src/assets/decor/border-bottom.png`)}
                             className="button-cakes"
                         />
                         Bottom Border
@@ -284,7 +290,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => toggleDecor("border")}
                     >
                         <img
-                            src={`/src/assets/decor/border-tier-3.png`}
+                            src={getImage(`/src/assets/decor/border-tier-3.png`)}
                             className="button-cakes"
                         />
                         Upper Borders
@@ -295,7 +301,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => toggleDecor("roses")}
                     >
                         <img
-                            src={`/src/assets/decor/roses-tier-2.png`}
+                            src={getImage(`/src/assets/decor/roses-tier-2.png`)}
                             className="button-cakes"
                         />
                         Rosettes
@@ -333,7 +339,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setFruit("strawberry")}
                     >
                         <img
-                            src={`/src/assets/fruits/strawberry.png`}
+                            src={getImage(`/src/assets/fruits/strawberry.png`)}
                             className="button-cakes"
                         />
                         Strawberry
@@ -344,7 +350,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setFruit("blueberry")}
                     >
                         <img
-                            src={`/src/assets/fruits/blueberry.png`}
+                            src={getImage(`/src/assets/fruits/blueberry.png`)}
                             className="button-cakes"
                         />
                         Blueberry
@@ -355,7 +361,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setFruit("cherry")}
                     >
                         <img
-                            src={`/src/assets/fruits/cherry.png`}
+                            src={getImage(`/src/assets/fruits/cherry.png`)}
                             className="button-cakes"
                         />
                         Cherry
@@ -366,7 +372,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setFruit("banana")}
                     >
                         <img
-                            src={`/src/assets/fruits/banana.png`}
+                            src={getImage(`/src/assets/fruits/banana.png`)}
                             className="button-cakes"
                         />
                         Banana
@@ -377,7 +383,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                     onClick={() => setFruit("orange")}
                     >
                         <img
-                            src={`/src/assets/fruits/orange.png`}
+                            src={getImage(`/src/assets/fruits/orange.png`)}
                             className="button-cakes"
                         />
                         Orange
