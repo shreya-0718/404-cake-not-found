@@ -21,6 +21,13 @@ const candles = Object.entries(candleImages)
     return acc;
   }, {});
 
+  const images = import.meta.glob("/src/assets/**/*.{png,jpg,jpeg,webp}", {
+    eager: true,
+  });
+
+  const getImage = (path) => images[`/src/assets/${path}`]?.default;
+
+
 
   return (
     <div className="cake-preview">

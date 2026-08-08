@@ -1,6 +1,13 @@
 import "./NavArrows.css";
 
 export default function NavArrows({ back, forward, onClick }) {
+
+  const images = import.meta.glob("/src/assets/**/*.{png,jpg,jpeg,webp}", {
+    eager: true,
+  });
+
+  const getImage = (path) => images[`/src/assets/${path}`]?.default;
+
   return (
     <div className="nav-arrows">
       <img
