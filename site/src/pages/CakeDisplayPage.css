@@ -1,0 +1,71 @@
+.candle-flame-wrapper {
+  position: absolute;
+  bottom: 113%;
+  left: 50%;
+  transform: translateX(-8%);
+  pointer-events: none;
+}
+
+.cake-preview {
+  position: relative;
+}
+
+.cake-and-candle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.candle-flame {
+  height: 60px;
+  width: auto;
+  z-index: 40;
+}
+
+.candle-1 {
+  transform: translateY(-47%);
+}
+
+.candle-2 {
+  transform: translateY(-110%);
+}
+
+.candle-3 {
+  transform: translateY(-143%);
+}
+
+.blow-text {
+  margin-bottom: -10%;
+  margin-left: 23%;
+  font-family: var(--font-secondary);
+  color: var(--brown);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.back-arrow-box {
+    display: flex;
+    align-items: start;
+    width: 100%;
+    padding-top: 10px;
+    margin-bottom: -75px;
+}
+
+.home-btn {
+    width: 60px;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-left: 2%;
+}
+
+.home-btn:hover {
+transform:rotate(5deg)}
+
+
+.cake-candle + .candle-flame-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
