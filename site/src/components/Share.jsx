@@ -4,6 +4,7 @@ import supabase from "../supabaseClient";
 export default function Share({ cakeData }) {
   const [link, setLink] = useState("");
 
+
   async function handleShare() {
     const { data, error } = await supabase
       .from("cakes")

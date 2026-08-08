@@ -19,6 +19,13 @@ export default function FinalPreview() {
 
   const [view, setView] = useState("side");
 
+  const images = import.meta.glob("/src/assets/**/*.{png,jpg,jpeg,webp}", {
+    eager: true,
+  });
+
+  const getImage = (path) => images[`${path}`]?.default;
+
+
   if (!state) {
     return (
       <div className="centered">
