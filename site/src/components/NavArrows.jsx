@@ -6,7 +6,7 @@ export default function NavArrows({ back, forward, onClick }) {
     eager: true,
   });
 
-  const getImage = (path) => images[`/src/assets/${path}`]?.default;
+  const getImage = (path) => images[`${path}`]?.default;
 
   return (
     <div className="nav-arrows">

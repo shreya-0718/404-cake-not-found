@@ -8,7 +8,7 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
     eager: true,
   });
 
-  const getImage = (path) => images[`/src/assets/${path}`]?.default;
+  const getImage = (path) => images[`${path}`]?.default;
 
   const toggleDecor = (item) => {
     if (decor.includes(item)) {

@@ -25,7 +25,7 @@ const candles = Object.entries(candleImages)
     eager: true,
   });
 
-  const getImage = (path) => images[`/src/assets/${path}`]?.default;
+  const getImage = (path) => images[`${path}`]?.default;
 
 
 
