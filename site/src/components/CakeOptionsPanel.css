@@ -140,5 +140,5 @@
   font-family: var(--font-secondary);
   font-size: 1.1rem;
   color: var(--brown);
-  resize: vertical;
+  resize: vertical horizontal;
 }

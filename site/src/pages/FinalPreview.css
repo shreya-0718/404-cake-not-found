@@ -37,14 +37,15 @@ transform:rotate(5deg)}
 }
 
 .cake-preview-wrapper {
+  margin-top: 10px;
   width: min(100%, 700px);
   min-height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   position: relative;
-  gap: 50px;
+  gap: 120px;
 }
 
 .down {

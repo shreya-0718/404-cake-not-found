@@ -208,7 +208,6 @@ export default function CakeOptionsPanel({tier, setTier, flavor, setFlavor, icin
                         Pastel Blue
                     </button>
 
-{/*reminder to change the colors of the ones below next time*/}
                     <button
                     className={`btn ${icing === "cream" ? "active" : ""}`}
                     onClick={() => setIcing("cream")}
