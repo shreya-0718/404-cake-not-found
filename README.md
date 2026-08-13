@@ -1,4 +1,4 @@
-cloud bakery
+# cloud bakery
 
 I built this adorable site where you can customize a cake (with flavor, icing color, decorations, fruits, and a candle!) 
 and write a card and get a custom link you can send to anyone you want!
